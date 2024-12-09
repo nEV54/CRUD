@@ -1,0 +1,40 @@
+<mvc:View controllerName="com.app.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="idPage" title="{i18n>title}">
+        <Table id="idProductsTable" items="{/results}">
+            <columns>
+                <Column>
+                    <Text text="ID" />
+                </Column>
+                <Column>
+                    <Text text="Name" />
+                </Column>
+                <Column>
+                    <Text text="Rating" />
+                </Column>
+                <Column>
+                    <Text text="Price" />
+                </Column>
+                <Column>
+                    <Text text="Actions" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{ID}" />
+                        <Text text="{Name}" />
+                        <Text text="{Rating}" />
+                        <Input value="{Price}" editable="false"/>
+                        <HBox >
+                        <Button icon="sap-icon://edit" text="Edit" press="onEdit"/>
+                        <Button class="sapUiSmallMarginBeginEnd" type="Reject" icon="sap-icon://delete" text="Delete" press="onDelete"/>
+                        <Button icon="sap-icon://copy" text="Copy" press="onDuplicate"/> 
+                        </HBox>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+    </Page>
+</mvc:View>
